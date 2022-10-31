@@ -1,29 +1,24 @@
+#!/usr/bin/env python3
 from os \
     import walk, path
 
-pathToWireguardConfig = '/etc/wireguard'
 
-
-def listConfiguration():
-    global pathToWireguardConfig
+def listConfiguration( path_to_wireguard_configuration ):
     retVal = []
-    
-    for (dirpath, dirnames, files) in walk(pathToWireguardConfig):
-        for fname in files:
-            pathTo = path.join(dirpath, fname)
-            name, ext = path.splitext(fname)
 
-            if ext == '.conf':
-                print(pathTo)
-                retVal.append(pathTo)
+    if( isinstance( path_to_wireguard_configuration, str ) ):
+        for ( dirpath, dirnames, files ) \
+            in walk( path_to_wireguard_configuration ):
+
+            for fname in files:
+                pathTo = path.join( dirpath, fname )
+                name, ext = path.splitext( fname )
+
+                if ext == '.conf':
+                    print( pathTo )
+                    retVal.append( pathTo )
+                pass
+            
+        pass
 
     return retVal
-
-
-def main():
-    print(listConfiguration())
-
-
-
-if __name__ == '__main__':
-    main()
