@@ -3,6 +3,7 @@
 
 # For documentation
 *.md diff=markdown eol=crlf
+
 *.py diff=py eol=lf
 *.sh diff=sh eol=lf
 
