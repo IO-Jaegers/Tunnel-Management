@@ -20,13 +20,13 @@ class configuration_peer_variables:
             var_shared_key, \
             var_persistent_keepalive
         
-        endpoint: Final   = var_endpoint
+        self.endpoint: Final   = var_endpoint
         
-        allowedIps: Final = var_allowed_ips
+        self.allowedIps: Final = var_allowed_ips
 
-        publicKey: Final  = var_public_key
-        sharedKey: Final  = var_shared_key
-        keepAlive: Final  = var_persistent_keepalive
+        self.publicKey: Final  = var_public_key
+        self.sharedKey: Final  = var_shared_key
+        self.keepAlive: Final  = var_persistent_keepalive
         
 
 
@@ -50,16 +50,17 @@ class configuration_interface_variables:
             var_post_down, \
             var_addr, \
             var_dns    
-        address: Final = var_addr
-        dns: Final = var_dns
 
-        privateKey: Final = var_private_key
-        listenPort: Final = var_listen_ports
+        self.address: Final = var_addr
+        self.dns: Final = var_dns
+
+        self.privateKey: Final = var_private_key
+        self.listenPort: Final = var_listen_ports
         
-        saveConfig: Final = var_save_config
+        self.saveConfig: Final = var_save_config
 
-        postUp: Final = var_post_up
-        postDown: Final = var_post_down
+        self.postUp: Final = var_post_up
+        self.postDown: Final = var_post_down
 
 
 ##
@@ -77,8 +78,8 @@ class configuration_attributes:
         global var_attribute_peer, \
             var_attribute_interface
 
-        peer: Final = var_attribute_peer
-        interface: Final = var_attribute_interface
+        self.peer: Final = var_attribute_peer
+        self.interface: Final = var_attribute_interface
 
 
 # Main
