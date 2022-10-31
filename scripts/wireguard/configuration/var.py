@@ -81,11 +81,23 @@ class configuration_attributes:
         self.peer: Final = var_attribute_peer
         self.interface: Final = var_attribute_interface
 
+    def get_peer( self ):
+        return self.peer
+
+    def get_interface( self ):
+        return self.interface
+
+
 
 # Main
 class configuration:
     def __init__( self ):
         self.attributes = configuration_attributes()
         self.variables = configuration_variables()
+    
+    def get_attributes( self ):
+        return self.attributes
 
+    def get_variables( self ):
+        return self.variables
     
